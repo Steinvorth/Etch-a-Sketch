@@ -1,15 +1,25 @@
 //DOMS
 const gridContainer = document.getElementById("grid");
+const original = document.createElement('div');
+original.className = "col";
 
-function makeRows(rows, cols){
-    gridContainer.style.setProperty('--grid-rows', rows);
-    gridContainer.style.setProperty('--grid-cols', cols);
 
-    for(c = 0; c < (rows * cols); c++){
-        let cell = document.createElement('div');
-        cell.innerText = ("a");
-        gridContainer.appendChild(cell).className = "grid-item";
+//makes grid with divs
+function makeGrid(){
+    for(let r = 0; r < 16; r++){
+        const row = document.createElement('div');
+        row.className = "row";
+        gridContainer.appendChild(row);
+        for(let c = 0; c < 16; c++){
+            let clones = original.cloneNode(true);
+            clones.addEventListener('mouseover', ()=>{
+                clones.style.backgroundColor ='red';
+            });
+            row.appendChild(clones);
+        }
     }
 }
 
-makeRows(16,16);
+//calls grid function
+makeGrid();
+

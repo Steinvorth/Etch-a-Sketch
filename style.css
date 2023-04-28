@@ -1,8 +1,27 @@
+#container{
+    display: flex;
+
+}
+
+#top{
+    display: flex;
+    margin-top: 200px;
+}
+
+#bottom{
+    display: flex;
+    margin-bottom: 200px;
+}
+
 .grid{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     border: 1px solid;
+    width: 960px;
+    height: 960px;
 }
 
 .row{

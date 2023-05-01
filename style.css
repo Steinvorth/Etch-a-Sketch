@@ -69,7 +69,7 @@ html{
     width: 100%;
 }
 
-#gri{
+.grid{
     font-family: 'Darumadrop One', cursive;
     font-size: 68px;
     height: 200px;

@@ -4,9 +4,13 @@ const original = document.createElement('div');
 original.className = "col";
 
 const clearButton = document.getElementById("clear");
-const colorButton = document.getElementById("color");
+const gridSize = document.getElementById("color");
 
 let userGrid = 100;
+
+// gridSize.addEventListener('click', () =>{
+//     userGrid = prompt("Set a new Grid Size: ", 100);
+// });
 
 //makes grid with divs
 function makeGrid(){

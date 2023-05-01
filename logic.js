@@ -17,7 +17,7 @@ function makeGrid(){
 
             let clones = original.cloneNode(true);
             clones.addEventListener('mouseover', ()=>{
-                clones.style.backgroundColor ='red';
+                clones.style.backgroundColor ='black';
             });
 
             row.appendChild(clones);

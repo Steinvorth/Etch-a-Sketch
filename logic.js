@@ -4,13 +4,23 @@ const original = document.createElement('div');
 original.className = "col";
 
 const clearButton = document.getElementById("clear");
-const gridSize = document.getElementById("color");
+const gridSize = document.getElementById("gridSize");
 
 let userGrid = 100;
 
-// gridSize.addEventListener('click', () =>{
-//     userGrid = prompt("Set a new Grid Size: ", 100);
-// });
+gridSize.addEventListener('click', () =>{
+    newGrid = prompt("Set a new Grid Size: ", userGrid);
+    if (newGrid !== null) { //check if user clicked "cancel"
+        newGrid = parseInt(newGrid); //convert input to integer
+        if (!isNaN(newGrid) && newGrid > 0 && newGrid <=100) { //check if input is a number greater than 0
+            userGrid = newGrid;
+            gridContainer.innerHTML = ""; //clear the grid container
+            makeGrid(); //create new grid with updated size
+        } else {
+            alert("Please enter a valid number greater than 0 or less than 100."); //display error message
+        }
+    }
+});
 
 //makes grid with divs
 function makeGrid(){

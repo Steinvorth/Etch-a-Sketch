@@ -3,7 +3,7 @@ const gridContainer = document.getElementById("grid");
 const original = document.createElement('div');
 original.className = "col";
 
-let userGrid = 100;
+let userGrid = 64;
 
 //makes grid with divs
 function makeGrid(){

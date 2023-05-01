@@ -1,5 +1,5 @@
 html{
-    background-color: #E1D89F;
+    background-color: #ED9B40;
 }
 #container{
     display: flex;
@@ -11,6 +11,11 @@ html{
     display: flex;
     height: 800px;
     flex: 1 0 calc(25% - 10px); 
+    font-family: 'Darumadrop One', cursive;
+    font-size: 140px;
+    color: #FFEEDB;
+    justify-content: center;
+    align-content: center;
 } 
 
 #side1{
@@ -29,6 +34,7 @@ html{
     flex-direction: column;
     flex: 1 1 calc(25% - 10px); 
     background-color: white;
+    border: 40px solid #e3cfb8;
 }
 
 .row{
@@ -48,4 +54,11 @@ html{
     width: 300px;
     align-content: center;
     align-self: center;
+    justify-content: center;
+}
+
+#clear{
+    font-family: 'Darumadrop One', cursive;
+    font-size: 68px;
+    height: 200px;
 }

@@ -49,12 +49,13 @@ html{
 
 .opt{
     display:flex;
+    flex-direction: column;
     border: 2px solid red;
     height: 2000px;
     width: 300px;
     align-content: center;
     align-self: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 #clear{
@@ -62,3 +63,15 @@ html{
     font-size: 68px;
     height: 200px;
 }
+
+.clear{
+    height: 100%;
+    width: 100%;
+}
+
+#gri{
+    font-family: 'Darumadrop One', cursive;
+    font-size: 68px;
+    height: 200px;
+}
+

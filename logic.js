@@ -3,6 +3,9 @@ const gridContainer = document.getElementById("grid");
 const original = document.createElement('div');
 original.className = "col";
 
+const clearButton = document.getElementById("clear");
+const colorButton = document.getElementById("color");
+
 let userGrid = 100;
 
 //makes grid with divs
@@ -17,10 +20,15 @@ function makeGrid(){
 
             let clones = original.cloneNode(true);
             clones.addEventListener('mouseover', ()=>{
-                clones.style.backgroundColor ='black';
+                clones.style.backgroundColor = 'black';
             });
 
             row.appendChild(clones);
+
+            //clear button
+            clearButton.addEventListener('click',() =>{
+                clones.style.backgroundColor= 'white';
+            });
         }
     }
 }

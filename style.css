@@ -50,7 +50,6 @@ html{
 .opt{
     display:flex;
     flex-direction: column;
-    border: 2px solid red;
     align-content: center;
     align-self: center;
     justify-content: space-around;
@@ -60,11 +59,19 @@ html{
 #clear{
     font-family: 'Darumadrop One', cursive;
     font-size: 68px;
+    background-color: transparent;
+    border: transparent;
 }
 
 .gridSize{
     font-family: 'Darumadrop One', cursive;
-    font-size: 68px;
+    font-size: 20px;
+    color: #FFEEDB;
+}
+
+#rgb{
+    background-color: transparent;
+    border: transparent;
 }
 
 .slider {

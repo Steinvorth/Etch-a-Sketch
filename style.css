@@ -9,32 +9,32 @@ html{
 
 #top{
     display: flex;
-    height: 800px;
+    height: 200px;
     flex: 1 0 calc(25% - 10px); 
     font-family: 'Darumadrop One', cursive;
-    font-size: 140px;
+    font-size: 60px;
     color: #FFEEDB;
     justify-content: center;
     align-content: center;
+    margin-bottom: 60px;
 } 
 
 #side1{
     display: flex;
     flex-direction: row-reverse;
-    flex: 1 2 calc(25% - 10px);
-    height: 2000px;
+    flex: 1 1 calc(25% - 10px);
 } 
 #side2{
-    flex: 1 2 calc(25% - 10px); 
-    height: 2000px;
+    flex: 1 1 calc(25% - 10px); 
 }
 
 #grid{
     display: flex;
     flex-direction: column;
-    flex: 1 1 calc(25% - 10px); 
+    flex: 1 1 600px; 
+    min-height: 600px;
     background-color: white;
-    border: 40px solid #e3cfb8;
+    border: 8px solid #e3cfb8;
 }
 
 .row{
@@ -51,8 +51,6 @@ html{
     display:flex;
     flex-direction: column;
     border: 2px solid red;
-    height: 2000px;
-    width: 300px;
     align-content: center;
     align-self: center;
     justify-content: space-around;
@@ -61,17 +59,10 @@ html{
 #clear{
     font-family: 'Darumadrop One', cursive;
     font-size: 68px;
-    height: 200px;
-}
-
-.clear{
-    height: 100%;
-    width: 100%;
 }
 
 .gridSize{
     font-family: 'Darumadrop One', cursive;
     font-size: 68px;
-    height: 200px;
 }
 

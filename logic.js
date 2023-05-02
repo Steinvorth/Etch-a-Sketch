@@ -6,24 +6,23 @@ original.className = "col";
 const clearButton = document.getElementById("clear");
 const gridSize = document.getElementById("gridSize");
 
-let userGrid = 100;
+ // Display the default slider value
+const output = document.getElementById("gridValue");
+output.innerHTML = gridSize.value;
 
-gridSize.addEventListener('click', () =>{
-    newGrid = prompt("Set a new Grid Size: ", userGrid);
-    if (newGrid !== null) { //check if user clicked "cancel"
-        newGrid = parseInt(newGrid); //convert input to integer
-        if (!isNaN(newGrid) && newGrid > 0 && newGrid <=100) { //check if input is a number greater than 0
-            userGrid = newGrid;
-            gridContainer.innerHTML = ""; //clear the grid container
-            makeGrid(); //create new grid with updated size
-        } else {
-            alert("Please enter a valid number greater than 0 or less than 100."); //display error message
-        }
-    }
-});
+let userGrid = gridSize.value;
+
+// Update the current slider value (each time you drag the slider handle)
+gridSize.oninput = function() {
+  output.innerHTML = this.value;
+  userGrid = this.value;
+  clearGrid();
+  makeGrid();
+}
 
 //makes grid with divs
 function makeGrid(){
+
     for(let r = 0; r < userGrid; r++){
 
         const row = document.createElement('div');
@@ -44,6 +43,12 @@ function makeGrid(){
                 clones.style.backgroundColor= 'white';
             });
         }
+    }
+}
+
+function clearGrid(){
+    while (gridContainer.firstChild) {
+      gridContainer.removeChild(gridContainer.firstChild);
     }
 }
 

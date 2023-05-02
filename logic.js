@@ -5,6 +5,7 @@ original.className = "col";
 
 const clearButton = document.getElementById("clear");
 const gridSize = document.getElementById("gridSize");
+const rainbowButton = document.getElementById("rgb");
 
  // Display the default slider value
 const output = document.getElementById("gridValue");
@@ -42,6 +43,16 @@ function makeGrid(){
             clearButton.addEventListener('click',() =>{
                 clones.style.backgroundColor= 'white';
             });
+            
+            rainbowButton.addEventListener('click', () =>{
+                if(rainbowButton.value == "OFF"){
+                    rainbowButton.value = "ON";
+                }
+                else if(rainbowButton.value == "ON"){
+                    rainbowButton.value = "OFF";
+                }
+            });
+
         }
     }
 }

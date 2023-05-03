@@ -33,26 +33,25 @@ function makeGrid(){
         for(let c = 0; c < userGrid; c++){
 
             let clones = original.cloneNode(true);
+
+            rainbowButton.addEventListener('onclick', toggle);
+            
             clones.addEventListener('mouseover', ()=>{
-                clones.style.backgroundColor = 'black';
+                if(rainbowButton.value == "OFF"){
+                    clones.style.backgroundColor = 'black';
+                }
+                else{
+                    clones.style.backgroundColor = 'blue';
+                }
+                
             });
 
             row.appendChild(clones);
-
+            
             //clear button
             clearButton.addEventListener('click',() =>{
-                clones.style.backgroundColor= 'white';
+                clones.style.backgroundColor = 'white';
             });
-            
-            rainbowButton.addEventListener('click', () =>{
-                if(rainbowButton.value == "OFF"){
-                    rainbowButton.value = "ON";
-                }
-                else if(rainbowButton.value == "ON"){
-                    rainbowButton.value = "OFF";
-                }
-            });
-
         }
     }
 }
@@ -60,6 +59,15 @@ function makeGrid(){
 function clearGrid(){
     while (gridContainer.firstChild) {
       gridContainer.removeChild(gridContainer.firstChild);
+    }
+}
+
+function toggle(button){
+    if(button.value == "OFF"){
+        button.value = "ON";
+    }
+    else{
+        button.value = "OFF";
     }
 }
 

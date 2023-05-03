@@ -12,13 +12,16 @@ const output = document.getElementById("gridValue");
 output.innerHTML = gridSize.value;
 
 let userGrid = gridSize.value;
+let timer;
 
 // Update the current slider value (each time you drag the slider handle)
 gridSize.oninput = function() {
-  output.innerHTML = this.value;
-  userGrid = this.value;
+  output.innerHTML = gridSize.value;
+  userGrid = gridSize.value;
   clearGrid();
-  makeGrid();
+  clearTimeout(timer);
+  timer = setTimeout(makeGrid, 500);
+  
 }
 
 //makes grid with divs

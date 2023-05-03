@@ -41,7 +41,8 @@ function makeGrid(){
                     clones.style.backgroundColor = 'black';
                 }
                 else{
-                    clones.style.backgroundColor = 'blue';
+                    let red, green, blue;
+                    clones.style.backgroundColor = randomColor();
                 }
                 
             });
@@ -71,6 +72,20 @@ function toggle(button){
     }
 }
 
+function randomColor(){
+    let black = Math.floor(Math.random()*10);
+    
+    if(black === 0){
+        return "rgb(0,0,0)"
+    }
+    else{
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+
+        return `rgb(${red}, ${green}, ${blue})`;
+    }    
+}
 //calls grid function
 makeGrid();
 
